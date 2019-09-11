@@ -1,13 +1,15 @@
+echo Введите имя пользователя
+read NAMEUSER
 #Обновление всех пакетов
 apt update && apt upgrade -y
 #Установка окружения рабочего стола
 sudo apt install xfce4 xfce4-goodies -y
 #Создание нового юзера
-adduser whoami
+adduser $NAMEUSER
 #Установка патека по предоставлению root прав
 apt install sudo
 #Предоставление рут прав созданому юзеру
-adduser whoami sudo
+adduser $NAMEUSER sudo
 #Установка репозитория NoMachine (Аналог RPD только для Linux)
 cd /tmp && wget https://download.nomachine.com/download/6.7/Linux/nomachine_6.7.6_11_amd64.deb
 #Установка NoMachine
