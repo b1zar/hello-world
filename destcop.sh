@@ -20,3 +20,5 @@ sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable
 #Установка Google Chrome
 sudo apt-get update
 sudo apt-get install google-chrome-stable -y
+sudo apt update
+sudo apt install build-essential -y
